@@ -1,11 +1,18 @@
-import { BarChart, Bar, XAxis, YAxis, Legend, CartesianGrid } from "recharts";
+import {
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  Tooltip,
+  Legend,
+  CartesianGrid,
+} from "recharts";
 
 function Patients() {
   const data = [
-    { name: "Male", amount: 48 },
-    { name: "Female", amount: 52 },
+    { name: "Male", amount: 48, total: 100 },
+    { name: "Female", amount: 52, total: 100 },
   ];
-  const total = data.reduce((sum, item) => sum + item.amount, 0);
 
   return (
     <div className="home__main__patients flex border-1 rounded-lg w-auto justify-spaces">
