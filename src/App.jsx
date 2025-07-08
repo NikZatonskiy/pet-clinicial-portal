@@ -5,7 +5,7 @@ import Home from "./home/components/Home";
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path="/pet-clinicial-portal/" element={<Home />} />
     </Routes>
   );
 }
