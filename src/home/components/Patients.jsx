@@ -7,7 +7,7 @@ import {
   CartesianGrid,
   Cell,
 } from "recharts";
-import patientsIcon from "/pet-clinicial-portal/src/assets/patients_icon.png";
+import patientsIcon from "../../assets/patients_icon.png";
 
 function Patients() {
   const data = [
