@@ -3,11 +3,11 @@ import {
   Bar,
   XAxis,
   YAxis,
-  Tooltip,
   Legend,
   CartesianGrid,
   Cell,
 } from "recharts";
+import patientsIcon from "/pet-clinicial-portal/src/assets/patients_icon.png";
 
 function Patients() {
   const data = [
@@ -20,11 +20,7 @@ function Patients() {
     <div className="home__main__patients flex p-6 bg-gray-100 border-1 border-gray-200 rounded-lg w-auto justify-spaces">
       <div className="home__main__patients__describe">
         <div className="home__main__patients__describe__title flex text-lg font-semibold gap-5">
-          <img
-            alt="patients icon"
-            src="/pet-clinicial-portal/src/assets/patients_icon.png"
-            className="w-12"
-          />
+          <img alt="patients icon" src={patientsIcon} className="w-12" />
           <h2 className="flex items-center">Patients</h2>
         </div>
         <p>

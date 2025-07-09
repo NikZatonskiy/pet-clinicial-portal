@@ -1,4 +1,5 @@
 import { Cell, ResponsiveContainer, PieChart, Pie, Label } from "recharts";
+import moodIcon from "/pet-clinicial-portal/src/assets/mood_icon.png";
 
 function Mood() {
   const score = 8.2;
@@ -11,11 +12,7 @@ function Mood() {
   return (
     <div className="home__main__averages-score__mood flex bg-gray-100 border-1 border-gray-200 rounded-lg justify-between">
       <div className="flex p-6 gap-8">
-        <img
-          alt="patients icon"
-          src="/pet-clinicial-portal/src/assets/mood_icon.png"
-          className="w-12 h-12"
-        />
+        <img alt="patients icon" src={moodIcon} className="w-12 h-12" />
         <div>
           <h2 className="text-lg font-semibold">Mood</h2>
           <p>17 patients reported</p>

@@ -2,6 +2,7 @@ import AverageScore from "./AverageScore/AverageScore";
 import PatientResponseRate from "./PatientResponseRate";
 import Patients from "./patients";
 import SymptomSummary from "./SymptomSummary";
+import companyIcon from "../../assets/company_icon.png";
 
 function Home() {
   return (
@@ -12,7 +13,7 @@ function Home() {
           <h1 className="flex items-center">Hi, Edward, welcome back!</h1>
           <img
             alt="company icon"
-            src="/pet-clinicial-portal/src/assets/company_icon.png"
+            src={companyIcon}
             className="home__title w-100"
           />
         </div>

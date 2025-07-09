@@ -1,4 +1,5 @@
 import { Cell, ResponsiveContainer, PieChart, Pie, Label } from "recharts";
+import physicalWellbeingIcon from "../../../assets/physical_wellbeing_icon.png";
 
 function PhysicalWellbeing() {
   const score = 7.1;
@@ -13,7 +14,7 @@ function PhysicalWellbeing() {
       <div className="flex p-6 gap-8">
         <img
           alt="patients icon"
-          src="/pet-clinicial-portal/src/assets/physical_wellbeing_icon.png"
+          src={physicalWellbeingIcon}
           className="w-12 h-12"
         />
         <div>
