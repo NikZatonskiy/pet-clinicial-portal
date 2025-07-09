@@ -22,7 +22,7 @@ function Patients() {
         <div className="home__main__patients__describe__title flex text-lg font-semibold gap-5">
           <img
             alt="patients icon"
-            src="/pet-clinicial-portal/src/assets/patients_icon.png"
+            src="/pet-clinicial-portal/dist/assets/patients_icon.png"
             className="w-12"
           />
           <h2 className="flex items-center">Patients</h2>
