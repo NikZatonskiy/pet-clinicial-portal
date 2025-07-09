@@ -6,4 +6,9 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
   base: "/pet-clinicial-portal/",
   plugins: [react(), tailwindcss()],
+  build: {
+    assetsInclude: ["**/*.png", "**/*.svg"],
+    outDir: "dist",
+    emptyOutDir: true,
+  },
 });
