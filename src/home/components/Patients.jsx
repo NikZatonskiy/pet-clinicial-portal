@@ -20,7 +20,7 @@ function Patients() {
         <div className="home__main__patients__describe__title flex">
           <img
             alt="patients icon"
-            src="/src/assets/patients_icon.png"
+            src="/pet-clinicial-portal/src/assets/patients_icon.png"
             className="w-12"
           />
           <h2>Patients</h2>

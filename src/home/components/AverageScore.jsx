@@ -5,7 +5,7 @@ function AverageScore() {
         <div className="home__main__averages-score__physical-wellbeing flex border-4 rounded-lg">
           <img
             alt="patients icon"
-            src="/src/assets/physical_wellbeing_icon.png"
+            src="/pet-clinicial-portal/src/assets/physical_wellbeing_icon.png"
             className="w-12"
           />
           <div>
@@ -21,7 +21,7 @@ function AverageScore() {
         <div className="home__main__averages-score__mood flex border-4 rounded-lg">
           <img
             alt="patients icon"
-            src="/src/assets/mood_icon.png"
+            src="/pet-clinicial-portal/src/assets/mood_icon.png"
             className="w-12"
           />
           <div>
@@ -37,7 +37,7 @@ function AverageScore() {
         <div className="home__main__averages-score__medication flex border-4 rounded-lg">
           <img
             alt="patients icon"
-            src="/src/assets/react.svg"
+            src="/pet-clinicial-portal/src/assets/react.svg"
             className="w-12"
           />
           <div>
