@@ -12,7 +12,7 @@ function Home() {
           <h1 className="flex items-center">Hi, Edward, welcome back!</h1>
           <img
             alt="company icon"
-            src="/pet-clinicial-portal/dist/assets/company_icon.png"
+            src="/pet-clinicial-portal/src/assets/company_icon.png"
             className="home__title w-100"
           />
         </div>
