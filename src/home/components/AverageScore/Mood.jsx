@@ -13,7 +13,7 @@ function Mood() {
       <div className="flex p-6 gap-8">
         <img
           alt="patients icon"
-          src="/src/assets/mood_icon.png"
+          src="/pet-clinicial-portal/src/assets/mood_icon.png"
           className="w-12 h-12"
         />
         <div>
