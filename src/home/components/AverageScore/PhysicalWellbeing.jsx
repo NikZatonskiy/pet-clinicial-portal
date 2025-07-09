@@ -1,18 +1,4 @@
-import {
-  BarChart,
-  Bar,
-  XAxis,
-  YAxis,
-  Tooltip,
-  Legend,
-  CartesianGrid,
-  Cell,
-  ResponsiveContainer,
-  PieChart,
-  Pie,
-  Text,
-  Label,
-} from "recharts";
+import { Cell, ResponsiveContainer, PieChart, Pie, Label } from "recharts";
 
 function PhysicalWellbeing() {
   const score = 7.1;
