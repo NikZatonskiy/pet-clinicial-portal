@@ -6,51 +6,58 @@ import {
   Tooltip,
   Legend,
   CartesianGrid,
+  Cell,
 } from "recharts";
 
 function Patients() {
   const data = [
-    { name: "Male", amount: 48, total: 100 },
-    { name: "Female", amount: 52, total: 100 },
+    { name: "Male", amount: 48 },
+    { name: "Female", amount: 52 },
   ];
+  const colors = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "red", "pink"];
 
   return (
-    <div className="home__main__patients flex border-1 rounded-lg w-auto justify-spaces">
+    <div className="home__main__patients flex p-6 bg-gray-100 border-1 border-gray-200 rounded-lg w-auto justify-spaces">
       <div className="home__main__patients__describe">
-        <div className="home__main__patients__describe__title flex">
+        <div className="home__main__patients__describe__title flex text-lg font-semibold gap-5">
           <img
             alt="patients icon"
             src="/pet-clinicial-portal/src/assets/patients_icon.png"
             className="w-12"
           />
-          <h2>Patients</h2>
+          <h2 className="flex items-center">Patients</h2>
         </div>
         <p>
           This statistic shows the total number of patients and the sex
           distribution
         </p>
-        <div className="home__main__patients__describe__total-number ">
+        <div className="flex w-24 border-2 border-dotted home__main__patients__describe__total-number ">
           <span>20</span>
           <span>Total number</span>
         </div>
       </div>
       <BarChart width={300} height={250} data={data}>
         <XAxis dataKey="name" stroke="#8884d8" />
-        <YAxis dataKey="total" unit="%" tickCount={3} />
-        {/* <Tooltip wrapperStyle={{ width: 100, backgroundColor: "#ccc" }} /> */}
+        <YAxis
+          type="number"
+          domain={[0, 100]}
+          unit="%"
+          tickCount={3}
+          labelLine={false}
+        />
         <Legend
           width={100}
-          // wrapperStyle={{
-          //   top: 40,
-          //   right: 20,
-          //   backgroundColor: "#f5f5f5",
-          //   border: "1px solid #d5d5d5",
-          //   borderRadius: 3,
-          //   lineHeight: "40px",
-          // }}
+          iconType="circle"
+          wrapperStyle={{
+            right: 250,
+          }}
         />
         <CartesianGrid stroke="#ccc" strokeDasharray="5 5" vertical={false} />
-        <Bar dataKey="amount" fill="#8884d8" barSize={60} />
+        <Bar dataKey="amount" fill="#8884d8" barSize={60}>
+          {data.map((entry, index) => (
+            <Cell key={`cell-${index}`} fill={colors[index % 20]} />
+          ))}
+        </Bar>
       </BarChart>
     </div>
   );
