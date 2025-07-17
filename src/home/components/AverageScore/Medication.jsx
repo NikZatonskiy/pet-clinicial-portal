@@ -26,15 +26,7 @@ const RoundedBar = (props) => {
 };
 
 const CustomLegend = ({ payload }) => (
-  <div
-    style={{
-      display: "flex",
-      justifyContent: "center",
-      flexWrap: "wrap",
-      gap: "16px",
-      marginTop: "8px",
-    }}
-  >
+  <div className="flex justify-between flex-wrap pt-[12px]">
     {payload.map((entry, i) => (
       <div key={`item-${i}`} style={{ display: "flex", alignItems: "center" }}>
         <span
@@ -44,10 +36,10 @@ const CustomLegend = ({ payload }) => (
             height: 10,
             backgroundColor: entry.color,
             marginRight: 8,
-            borderRadius: 2,
+            borderRadius: 6,
           }}
         />
-        - {entry.value}
+        {entry.value}
       </div>
     ))}
   </div>
@@ -64,33 +56,17 @@ function Medication() {
     },
   ];
 
-  const COLORS = ["#5A6ACF", "#8593ED", "#C7CEFF", "#EEEFF5"];
+  const COLORS = ["#5A6ACF", "#8593ED", "#C7CEFF", "#dadbe6ff"];
 
   return (
-    <div
-      className="p-6"
-      style={{
-        // padding: "16px",
-        backgroundColor: "#f3f4f6",
-        borderRadius: "8px",
-        width: "100%",
-      }}
-    >
-      <div style={{ display: "flex", alignItems: "flex-start" }}>
-        {/* Заголовок слева */}
-        <h3
-          // className="pl-2"
-          style={{
-            margin: "0 16px 0 0",
-            fontWeight: "bold",
-            minWidth: "80px",
-          }}
-        >
+    <div className="p-6 bg-gray-100 border-1 border-gray-200 rounded-lg w-[100%]">
+      <div className="flex items-start">
+        <h3 className="font-bold min-w-80px mr-18">
           Medication
         </h3>
 
         {/* График */}
-        <div style={{ flex: 1, height: "60px" }}>
+        <div className="flex-1 h-[30px]">
           <ResponsiveContainer width="100%" height="80%">
             <BarChart
               layout="vertical"

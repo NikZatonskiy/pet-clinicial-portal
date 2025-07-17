@@ -1,5 +1,5 @@
 import { Cell, ResponsiveContainer, PieChart, Pie, Label } from "recharts";
-import physicalWellbeingIcon from "../../../assets/physical_wellbeing_icon.png";
+import physicalWellbeingIcon from "../../../assets/physical_wellbeing_icon.svg";
 
 function PhysicalWellbeing() {
   const score = 7.1;

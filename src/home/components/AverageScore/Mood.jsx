@@ -1,5 +1,5 @@
 import { Cell, ResponsiveContainer, PieChart, Pie, Label } from "recharts";
-import moodIcon from "../../../assets/mood_icon.png";
+import moodIcon from "../../../assets/mood_icon.svg";
 
 function Mood() {
   const score = 8.2;

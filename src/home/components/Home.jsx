@@ -2,7 +2,7 @@ import AverageScore from "./AverageScore/AverageScore";
 import PatientResponseRate from "./PatientResponseRate";
 import Patients from "./patients";
 import SymptomSummary from "./SymptomSummary";
-import companyIcon from "../../assets/company_icon.png";
+import companyIcon from "../../assets/company_icon.svg";
 
 function Home() {
   return (
