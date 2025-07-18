@@ -1,6 +1,6 @@
-import PhysicalWellbeing from "./PhysicalWellbeing";
-import Mood from "./Mood";
-import Medication from "./Medication";
+import PhysicalWellbeing from "./PhysicalWellbeing/PhysicalWellbeing";
+import Mood from "./Mood/Mood";
+import Medication from "./Medication/Medication";
 
 function AverageScore() {
   return (
