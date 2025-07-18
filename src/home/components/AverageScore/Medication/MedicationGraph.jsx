@@ -1,31 +1,26 @@
 import { BarChart, Bar, XAxis, YAxis, ResponsiveContainer } from "recharts";
 
-const RoundedBar = (props) => {
-  const { fill, x, y, width, height, index } = props;
-  const radius = 3;
+const RoundedBar = ({ x, y, width, height, fill }) => {
+  const radius = 4;
+
   return (
-    <path
-      d={`
-        M${x},${y + radius}
-        Q${x},${y} ${x + radius},${y}
-        L${x + width - radius},${y}
-        Q${x + width},${y} ${x + width},${y + radius}
-        L${x + width},${y + height - radius}
-        Q${x + width},${y + height} ${x + width - radius},${y + height}
-        L${index === 0 ? x + radius : x},${y + height}
-        Q${index === 0 ? x : x},${y + height} ${index === 0 ? x : x},${
-        y + height - radius
-      }
-        L${index === 0 ? x : x},${y + radius}
-        Q${index === 0 ? x : x},${y} ${index === 0 ? x + radius : x},${y}
-        Z
-      `}
-      fill={fill}
-    />
+    <g>
+      <rect
+        x={x}
+        y={y}
+        width={width}
+        height={height}
+        fill={fill}
+        rx={radius}
+        ry={radius}
+      />
+    </g>
   );
 };
 
 function MedicationGraph({ data, colors }) {
+  const barKeys = Object.keys(data[0]).filter(key => key !== 'name');
+
   return(
     <div className="flex-1 h-[30px]">
       <ResponsiveContainer width="100%" height="80%">
@@ -38,34 +33,16 @@ function MedicationGraph({ data, colors }) {
         >
           <XAxis type="number" hide />
           <YAxis dataKey="name" type="category" hide />
-          <Bar
-            dataKey="Ibrutinib"
-            stackId="a"
-            fill={colors[0]}
-            name="Ibrutinib 40%"
-            shape={<RoundedBar />}
-          />
-          <Bar
-            dataKey="Acalabrutinib"
-            stackId="a"
-            fill={colors[1]}
-            name="Acalabrutinib 37%"
-            shape={<RoundedBar />}
-          />
-          <Bar
-            dataKey="Zanubrutinib"
-            stackId="a"
-            fill={colors[2]}
-            name="Zanubrutinib 13%"
-            shape={<RoundedBar />}
-          />
-          <Bar
-            dataKey="Other"
-            stackId="a"
-            fill={colors[3]}
-            name="Other 10%"
-            shape={<RoundedBar />}
-          />
+          {barKeys.map((key, index) => (
+            <Bar
+              key={key}
+              dataKey={key}
+              stackId="a"
+              fill={colors[index % colors.length]}
+              name={`${key} ${data[0][key]}%`}
+              shape={<RoundedBar />}
+            />
+          ))}
         </BarChart>
       </ResponsiveContainer>
     </div>

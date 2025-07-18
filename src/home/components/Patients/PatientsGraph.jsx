@@ -3,12 +3,28 @@ import {
   Bar,
   XAxis,
   YAxis,
-  Legend,
   CartesianGrid,
   Cell,
   ResponsiveContainer,
-  Text
 } from "recharts";
+
+const RoundedBar = ({ x, y, width, height, fill }) => {
+  const radius = 3;
+  
+  return (
+    <g>
+      <rect
+        x={x}
+        y={y}
+        width={width}
+        height={height}
+        fill={fill}
+        rx={radius}
+        ry={radius}
+      />
+    </g>
+  );
+};
 
 function PatientsGraph({ data, colors }) {
   return(
@@ -39,7 +55,7 @@ function PatientsGraph({ data, colors }) {
             // }}
           /> */}
           <CartesianGrid stroke="#ccc" strokeDasharray="5 5" vertical={false} />
-          <Bar dataKey="amount" fill="#8884d8" barSize={80}>
+          <Bar dataKey="amount" fill="#8884d8" barSize={80} shape={<RoundedBar />}>
             {data.map((entry, index) => (
               <Cell key={`cell-${index}`} fill={colors[index]} />
             ))}

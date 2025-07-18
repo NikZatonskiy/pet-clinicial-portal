@@ -1,5 +1,5 @@
 import companyIcon from "../../../assets/company_icon.svg";
-import InfoModal from "./InfoModal";
+import CompanyInfo from "./CompanyInfo";
 
 function HomeTitle() {
   return (
@@ -10,7 +10,7 @@ function HomeTitle() {
           alt="company icon"
           src={companyIcon}
         />
-        <InfoModal />
+        <CompanyInfo />
       </div>
     </div>
   )

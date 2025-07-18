@@ -1,10 +1,4 @@
 import {
-  BarChart,
-  Bar,
-  XAxis,
-  YAxis,
-  Legend,
-  CartesianGrid,
   Cell,
   ResponsiveContainer,
   PieChart,
@@ -30,7 +24,7 @@ const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, nam
 
 function SymptomSummaryGraph({ data, colors }) {
   return(
-    <ResponsiveContainer height={200}>
+    <ResponsiveContainer height={250}>
       <PieChart>
         <Pie
           data={data}
@@ -40,7 +34,6 @@ function SymptomSummaryGraph({ data, colors }) {
           outerRadius={80}
           fill="#8884d8"
           dataKey="value"
-          // label={({ name, percent }) => `${name}: ${(percent * 100).toFixed(0)}%`}
           label={renderCustomizedLabel}
           stroke="none"
         >
@@ -48,8 +41,37 @@ function SymptomSummaryGraph({ data, colors }) {
             <Cell key={`cell-${index}`} fill={colors[index % colors.length]} />
           ))}
         </Pie>
+        <Pie
+          data={[{ value: 100 }]}
+          cx="50%"
+          cy="50%"
+          innerRadius={80}
+          outerRadius={90}
+          fill="white"
+          labelLine={false}
+          stroke="none"
+        />
+        <Pie
+          data={[{ value: 100 }]}
+          cx="50%"
+          cy="50%"
+          innerRadius={100}
+          outerRadius={105}
+          fill="white"
+          labelLine={false}
+          stroke="none"
+        />
+        <Pie
+          data={[{ value: 100 }]}
+          cx="50%"
+          cy="50%"
+          innerRadius={115}
+          outerRadius={120}
+          fill="white"
+          labelLine={false}
+          stroke="none"
+        />
         <Tooltip formatter={(value) => [`${value}%`, 'Percentage']} />
-        
       </PieChart>
     </ResponsiveContainer>
   )
