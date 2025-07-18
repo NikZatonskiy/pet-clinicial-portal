@@ -7,7 +7,6 @@ import HomeTitle from "./HomeTitle/HomeTitle";
 function Home() {
   return (
     <main>
-      <div className="NaviBar" />
       <div className="home h-[100%]">
         <HomeTitle />
         <div className="home__main grid grid-cols-1 lg:grid-cols-2 gap-6 p-6">
