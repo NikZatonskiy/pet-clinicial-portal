@@ -28,7 +28,6 @@ const RoundedBar = ({ x, y, width, height, fill }) => {
 };
 
 function Graph({ data }) {
-  console.log(data);
   return (
     <div className="w-full h-full relative">
       <ResponsiveContainer
