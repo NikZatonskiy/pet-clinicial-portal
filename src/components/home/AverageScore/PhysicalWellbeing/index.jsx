@@ -1,4 +1,4 @@
-import physicalWellbeingIcon from "../../../../assets/home/physical_wellbeing_icon.svg";
+import physicalWellbeingIcon from "@assets/home/physical_wellbeing_icon.svg";
 import AverageScoreGraph from "../Graph";
 import { score, data } from "./consts";
 

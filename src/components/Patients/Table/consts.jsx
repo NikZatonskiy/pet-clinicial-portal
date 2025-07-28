@@ -85,3 +85,9 @@ export const data = [
     medicationAdherence: 75,
   },
 ];
+export const colorMap = {
+  "Very Severe": "bg-red-400",
+  Severe: "bg-orange-400",
+  Moderate: "bg-yellow-400",
+  Mild: "bg-green-600",
+};

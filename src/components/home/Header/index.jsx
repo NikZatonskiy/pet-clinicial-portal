@@ -1,4 +1,4 @@
-import companyIcon from "../../../assets/home/company_icon.svg";
+import companyIcon from "@assets/home/company_icon.svg";
 import CompanyInfo from "./ui/CompanyInfo";
 
 function Header() {

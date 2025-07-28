@@ -1,5 +1,5 @@
-import notificationIcon from "../../../assets/patients/notification_icon.svg";
-import helpIcon from "../../../assets/patients/help_icon.svg";
+import notificationIcon from "@assets/patients/notification_icon.svg";
+import helpIcon from "@assets/patients/help_icon.svg";
 
 function Header() {
   return (

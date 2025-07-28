@@ -1,5 +1,5 @@
 import { useState } from "react";
-import infoIcon from "../../../../assets/info_icon.svg";
+import infoIcon from "@assets/info_icon.svg";
 import Modal from "./Modal";
 
 function CompanyInfo() {

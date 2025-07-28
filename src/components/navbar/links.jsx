@@ -1,6 +1,6 @@
 import { NavLink } from "react-router";
-import homeIcon from "../../assets/navbar/home_icon.svg";
-import patientsIcon from "../../assets/navbar/patients_icon.svg";
+import homeIcon from "@assets/navbar/home_icon.svg";
+import patientsIcon from "@assets/navbar/patients_icon.svg";
 
 export const HomeLink = () => {
   return (

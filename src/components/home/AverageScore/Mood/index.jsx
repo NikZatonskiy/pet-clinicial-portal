@@ -1,4 +1,4 @@
-import moodIcon from "../../../../assets/home/mood_icon.svg";
+import moodIcon from "@assets/home/mood_icon.svg";
 import AverageScoreGraph from "../Graph";
 import { score, data } from "./consts";
 

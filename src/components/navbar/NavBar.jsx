@@ -1,5 +1,5 @@
-import poweredLogo from "../../assets/navbar/powered_logo.svg";
-import printIcon from "../../assets/navbar/print_icon.svg";
+import poweredLogo from "@assets/navbar/powered_logo.svg";
+import printIcon from "@assets/navbar/print_icon.svg";
 import { HomeLink, PatientsLink } from "./links";
 
 function NavBar() {

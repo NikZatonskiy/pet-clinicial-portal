@@ -1,4 +1,4 @@
-import iconInInfoIcon from "../../../../assets/home/icon_in_info.svg";
+import iconInInfoIcon from "@assets/home/icon_in_info.svg";
 
 function Modal() {
   return (

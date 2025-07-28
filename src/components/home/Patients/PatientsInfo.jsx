@@ -1,4 +1,4 @@
-import patientsIcon from "../../../assets/home/patients_icon.svg";
+import patientsIcon from "@assets/home/patients_icon.svg";
 
 function PatientsInfo() {
   return (

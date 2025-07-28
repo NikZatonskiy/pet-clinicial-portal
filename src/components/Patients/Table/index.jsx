@@ -27,11 +27,14 @@ const MedicalTable = () => {
     getSortedRowModel: getSortedRowModel(),
   });
 
+  const headerGroups = table.getHeaderGroups();
+  const rows = table.getRowModel().rows;
+
   return (
     <div className="w-full p-6">
       <table className="border-separate border-spacing-0 rounded-t-[12px] overflow-hidden border border-gray-200 w-full">
-        <Head table={table} />
-        <Body table={table} />
+        <Head headerGroups={headerGroups} />
+        <Body rows={rows} />
       </table>
     </div>
   );
