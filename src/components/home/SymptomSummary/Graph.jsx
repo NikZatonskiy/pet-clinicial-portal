@@ -14,7 +14,7 @@ const renderCustomizedLabel = ({
   const y = cy + radius * Math.sin(-(midAngle ?? 0) * RADIAN);
 
   return (
-    <text
+    <p
       x={x}
       y={y}
       fill="white"
@@ -22,7 +22,7 @@ const renderCustomizedLabel = ({
       dominantBaseline="central"
     >
       {`${((percent ?? 1) * 100).toFixed(0)}%`}
-    </text>
+    </p>
   );
 };
 

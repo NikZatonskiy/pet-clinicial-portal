@@ -14,13 +14,13 @@ function GraphLegends({ data }) {
     <div className="flex gap-6 mt-2 text-sm pt-6">
       <div className="flex items-center gap-2">
         <div className="w-3 h-3 rounded-full bg-[#6960D7] mr-2" />
-        <text>Male</text>
-        <text className="font-bold">{malePercentage}%</text>
+        <p>Male</p>
+        <p className="font-bold">{malePercentage}%</p>
       </div>
       <div className="flex items-center gap-2">
         <div className="w-3 h-3 rounded-full bg-[#E0DDFF] mr-2" />
-        <text>Female</text>
-        <text className="font-bold">{femalePercentage}%</text>
+        <p>Female</p>
+        <p className="font-bold">{femalePercentage}%</p>
       </div>
     </div>
   );
