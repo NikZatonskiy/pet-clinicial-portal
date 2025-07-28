@@ -15,6 +15,7 @@ export default defineConfig({
   resolve: {
     alias: {
       "@assets": path.resolve(__dirname, "./src/assets"),
+      "@slices": path.resolve(__dirname, "./src/store/slices"),
     },
   },
 });

@@ -1,4 +1,3 @@
-import { useState } from "react";
 import {
   useReactTable,
   getCoreRowModel,
@@ -8,21 +7,23 @@ import Body from "./Body";
 import { data } from "./consts";
 import Head from "./Head";
 import getColumns from "./Columns";
+import { useSelector, useDispatch } from "react-redux";
+import { setSorting } from "@slices/tableSlice";
 
 const MedicalTable = () => {
-  const [sorting, setSorting] = useState([
-    {
-      id: "name",
-      desc: true,
-    },
-  ]);
+  const sorting = useSelector((state) => state.table.sorting);
+  const dispatch = useDispatch();
 
   const columns = getColumns();
   const table = useReactTable({
     data,
     columns,
     state: { sorting },
-    onSortingChange: setSorting,
+    onSortingChange: (updater) => {
+      const newSorting =
+        typeof updater === "function" ? updater(sorting) : updater;
+      dispatch(setSorting(newSorting));
+    },
     getCoreRowModel: getCoreRowModel(),
     getSortedRowModel: getSortedRowModel(),
   });

@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import detailIcon from "@assets/patients/detail_icon.svg";
 import infoIcon from "@assets/info_icon.svg";
 import Modal from "../ui/Modal";
 import SortedButton from "../ui/SortedButton";
 import cn from "classnames";
 import { colorMap } from "../consts";
+import { setShowTooltip } from "@slices/tableSlice";
 
 const HeaderWithSort = ({ column, title, subTitle, center = false }) => (
   <div className={cn({ "text-center": center })}>
@@ -35,7 +36,8 @@ const SymptomSeverity = ({ name, severity }) => (
 );
 
 const getColumns = () => {
-  const [showTooltip, setShowTooltip] = useState(false);
+  const showTooltip = useSelector((state) => state.table.showTooltip);
+  const dispatch = useDispatch();
 
   return [
     {
@@ -80,8 +82,8 @@ const getColumns = () => {
             <span className="text-gray-500 font-normal text-sm">Severity</span>
             <div
               className="relative"
-              onMouseEnter={() => setShowTooltip(true)}
-              onMouseLeave={() => setShowTooltip(false)}
+              onMouseEnter={() => dispatch(setShowTooltip(true))}
+              onMouseLeave={() => dispatch(setShowTooltip(false))}
             >
               <img alt="info" src={infoIcon} className="cursor-pointer" />
               {showTooltip && <Modal />}
